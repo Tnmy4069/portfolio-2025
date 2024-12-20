@@ -48,7 +48,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap gap-4 items-center">
             <Link
               href="https://www.linkedin.com/in/hirodkar/"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white flex items-center"
+              className="px-6  py-3 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white flex items-center"
             >
               <Image src={LinkedinIcon} alt="Linkedin Icon" width={20} height={20} className="mr-2" /> Connect Me
             </Link>
@@ -69,8 +69,8 @@ const HeroSection = () => {
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQHDDcmVM8cuyg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696873548178?e=1739404800&v=beta&t=yymc4GDIxyd4hlYO5ghoeyE2nCQdp10Ut2VUMFFG78E"
+            <Image
+              src="/images/hero.jpg"
               alt="Tanmay Hirodkar"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               width={300}

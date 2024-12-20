@@ -5,7 +5,7 @@ const experiences = [
   {
     id: 1,
     company: 'Apex Learning Hub',
-    logo: 'https://lh4.googleusercontent.com/-sijJ1mjXh8E/AAAAAAAAAAI/AAAAAAAAAAA/XBk95MDrVW4/s60-w40-c-h40-k-mo/photo.jpg',
+    logo: '/images/alh.jpg',
     bgColor: 'bg-gray-700',
     details: [
       '(June 2023 - August 2023)',
@@ -18,7 +18,7 @@ const experiences = [
   {
     id: 2,
     company: 'HKLearning',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKWVHGiVIupIqm518MrWMNJzW9hBN7jF5CfA&s',
+    logo: '/images/hklnaa.png',
     bgColor: 'bg-red-600',
     details: [
       '(April 2023 - June 2023)',
@@ -31,7 +31,7 @@ const experiences = [
   {
     id: 3,
     company: 'STSARC',
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFGhxG09jcD9A/company-logo_200_200/company-logo_200_200/0/1704347483540/stsarc_logo?e=2147483647&v=beta&t=LZ2LBhrhJ5-KSGBSXAZPV7slJq-_KlM1o-7j8s5_eJg',
+    logo: '/images/stsarc.png',
     bgColor: 'bg-gray-700',
     details: [
       '(January 2024 - Present)',
@@ -44,7 +44,7 @@ const experiences = [
   {
     id: 4,
     company: 'SACSDE (President) & E-Cell MET (Vice President)',
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFaB-49ri1Itg/company-logo_200_200/company-logo_200_200/0/1695010171718/ecell_met_logo?e=2147483647&v=beta&t=P-meLrGLA-S69QUI838iKXmIcbD4y1jBppKQTOPuK5I',
+    logo: '/images/ecell.png',
     bgColor: 'bg-red-600',
     details: [
       '(July 2023 - Present)',
@@ -57,7 +57,7 @@ const experiences = [
   {
     id: 5,
     company: 'Arohi Software Development',
-    logo: 'https://via.placeholder.com/150',
+    logo: '/images/arohi.webp',
     bgColor: 'bg-blue-500',
     details: [
       '(Nov 2024 - May 2025)',
@@ -90,9 +90,9 @@ const ExperienceTimeline = () => {
             } flex-col md:flex-row`}
           >
             {/* Timeline Circle */}
-            <div className="z-20 flex items-center order-1 bg-gradient-to-br from-secondary-500 to-primary-500 shadow-xl w-8 h-8 rounded-full">
+           <center><div className="z-20 flex items-center order-1 bg-gradient-to-br from-secondary-500 to-primary-500 shadow-xl w-8 h-8 rounded-full">
               <h1 className="mx-auto font-semibold text-lg text-white">{exp.id}</h1>
-            </div>
+            </div></center> 
 
             {/* Content */}
             <div
@@ -101,11 +101,11 @@ const ExperienceTimeline = () => {
               } md:mt-0 mt-5`}
             >
               <div className="flex items-center mb-3">
-                <img
+                <Image
                   src={exp.logo}
                   alt={`${exp.company} Logo`}
-                  width={32}
-                  height={32}
+                  width={64}
+                  height={64}
                   className="mr-3"
                 />
                 <h3 className="font-bold text-white text-xl">{exp.company}</h3>

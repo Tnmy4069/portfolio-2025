@@ -20,6 +20,7 @@ module.exports = {
       ...colors,
       primary: colors.purple,
       secondary: colors.pink,
+      gray: colors.neutral, // For Tailwind CSS v3.0 color renaming
     },
   },
   plugins: [
