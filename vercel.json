@@ -1,0 +1,8 @@
+{
+    "build": {
+      "env": {
+        "FRAMER_MOTION_VERSION": "latest"
+      }
+    }
+  }
+  
