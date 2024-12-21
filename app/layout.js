@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
        
 
       </head>
-      <body className={`${inter.className} bg-[#121212] text-white`}>
+      <body className={`${inter.className} bg-gradient-to-br from-black via-slate-900 to-fuchsia-900 text-white`}>
         <main className="flex min-h-screen flex-col">
           <Navbar />
           <div className="flex-1">{children}</div>
