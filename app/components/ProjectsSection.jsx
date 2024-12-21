@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const projectsData = [
   {
@@ -99,11 +100,12 @@ const projectsData = [
 
 
 
-
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -113,14 +115,9 @@ const ProjectsSection = () => {
     project.tag.includes(tag)
   );
 
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
-
   return (
     <section id="projects">
-      <h2 className="text-center   uppercase text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 mt-4 mb-8 md:mb-12">
+      <h2 className="text-center uppercase text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
@@ -140,15 +137,9 @@ const ProjectsSection = () => {
           isSelected={tag === "Live"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
+          <li key={index} data-aos="fade-up">
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -157,7 +148,7 @@ const ProjectsSection = () => {
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />
-          </motion.li>
+          </li>
         ))}
       </ul>
     </section>
