@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content={metadata.author} />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
+        <link rel='icon' href='/favicon.ico' />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
